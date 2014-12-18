@@ -1,4 +1,4 @@
-Arduino Writing Text Sketch
+Arduino Text Writing Sketch
 ============================
 A multi-user chat-like application that sends typed messages to an arduino. The arduino prints the messages at a very high speed through an LED matrix. Wave the LED screen quickly to see the letters, or better yet, take pictures with a camera set to slow shutter speed and see the messages printed out in the air.
 
@@ -23,7 +23,7 @@ A multi-user chat-like application that sends typed messages to an arduino. The 
   * CS to Digital 4
   * CLK to Digital 3
 
-2. Connect the USB cable to your computer.
+2. Connect the USB cable from the arduino to your computer.
 
 ![Alt text](https://cloud.githubusercontent.com/assets/6833837/5483413/6be773ec-863f-11e4-8484-44e0983e2c5b.jpg)
 
