@@ -1,2 +1,2 @@
-Arduino_LED_matrix_sketch
+Arduino LED Matrix Sketch
 =========================
