@@ -1,6 +1,6 @@
 Arduino Text Writing Sketch
 ============================
-A multi-user chat-like application that sends typed messages to an arduino. The arduino prints the messages at a very high speed through an LED matrix. Wave the LED screen quickly to see the letters, or better yet, take pictures with a camera set to slow shutter speed and see the messages printed out in the air.
+An arduino sketch that sends a looping message to a MAX7219 LED Matrix display module. Because of the high speed at which the message prints to the matrix, it can be used as a tool for long exposure photography.
 
 
 ##Setting Up the Arduino and MAX7219 Matrix
@@ -44,4 +44,4 @@ A multi-user chat-like application that sends typed messages to an arduino. The 
 
 7. Verify and upload the sketch to your arduino to see the text print to your LED Matrix!
 
-8. Experiment with slow exposure photography to write messages in your photos.
+8. Experiment with long exposure photography by moving the matrix to write messages in your photos.
