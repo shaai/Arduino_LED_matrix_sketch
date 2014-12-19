@@ -1,6 +1,6 @@
 Arduino Text Writing Sketch
 ============================
-An arduino sketch that sends a looping message to a MAX7219 LED Matrix display module. Because of the high speed at which the message prints to the matrix, it can be used as a tool for long exposure photography.
+An arduino sketch that sends a looping message to a MAX7219 LED Matrix display module. Because of the high speed at which the message prints to the matrix, it can be used as a tool for writing messages in long exposure photography.
 
 
 ##Setting Up the Arduino and MAX7219 Matrix
