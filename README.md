@@ -45,3 +45,5 @@ An arduino sketch that sends a looping message to a MAX7219 LED Matrix display m
 7. Verify and upload the sketch to your arduino to see the text print to your LED Matrix!
 
 8. Experiment with long exposure photography by moving the matrix to write messages in your photos.
+
+![Alt text](https://cloud.githubusercontent.com/assets/6833837/5499733/7787bb3e-8703-11e4-84d6-2399907882c9.jpg)
