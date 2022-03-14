@@ -15,10 +15,10 @@
  *    substantial portions of the Software.
  * 
  *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- *    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- *    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *    EXPRESS OR IMPLIED, INCLUDING 0bUT NOT LIMITED TO THE WARRANTIES
+ *    OF MERCHANTA0bILITY, FITNESS FOR A PARTICULAR PURPOSE AND
  *    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- *    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ *    HOLDERS 0bE LIA0bLE FOR ANY CLAIM, DAMAGES OR OTHER LIA0bILITY,
  *    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  *    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *    OTHER DEALINGS IN THE SOFTWARE.
@@ -122,7 +122,7 @@ void LedControl::setLed(int addr, int row, int column, boolean state) {
     if(row<0 || row>7 || column<0 || column>7)
 	return;
     offset=addr*8;
-    val=B10000000 >> column;
+    val=0b10000000 >> column;
     if(state)
 	status[offset+row]=status[offset+row]|val;
     else {
@@ -168,7 +168,7 @@ void LedControl::setDigit(int addr, int digit, byte value, boolean dp) {
     offset=addr*8;
     v=charTable[value];
     if(dp)
-	v|=B10000000;
+	v|=0b10000000;
     status[offset+digit]=v;
     spiTransfer(addr, digit+1,v);
     
@@ -190,7 +190,7 @@ void LedControl::setChar(int addr, int digit, char value, boolean dp) {
     }
     v=charTable[index];
     if(dp)
-	v|=B10000000;
+	v|=0b10000000;
     status[offset+digit]=v;
     spiTransfer(addr, digit+1,v);
 }
@@ -209,7 +209,7 @@ void LedControl::spiTransfer(int addr, volatile byte opcode, volatile byte data)
     digitalWrite(LEDCONTROL_SPI_CS,LOW);
     //Now shift out the data 
     for(int i=maxbytes;i>0;i--)
- 	shiftOut(LEDCONTROL_SPI_MOSI,LEDCONTROL_SPI_CLK,MSBFIRST,spidata[i-1]);
+ 	shiftOut(LEDCONTROL_SPI_MOSI,LEDCONTROL_SPI_CLK,MS0bFIRST,spidata[i-1]);
     //latch the data onto the display
     digitalWrite(LEDCONTROL_SPI_CS,HIGH);
 }    
@@ -219,7 +219,7 @@ int LedControl::getCharArrayPosition(char input){
      if (input==':') return 11;
      if (input=='-') return 12;
      if (input=='.') return 13;
-     if ((input =='(')) return  14;  //replace by 'ñ'   
+     if ((input =='(')) return  14;  //replace by 'Ã±'   
      if ((input >='0')&&(input <='9')) return (input-'0');
      if ((input >='A')&&(input <='Z')) return (input-'A' + 15);
      if ((input >='a')&&(input <='z')) return (input-'a' + 15);     
@@ -240,6 +240,6 @@ void LedControl::writeString(int mtx, char * displayString) {
 
 void LedControl::displayChar(int matrix, int charIndex) {
   for (int i=0; i<6;i++) {
-      setRow(matrix,i, alphabetBitmap[charIndex][i]);
+      setRow(matrix,i, alphabet0bitmap[charIndex][i]);
   } 
 }
